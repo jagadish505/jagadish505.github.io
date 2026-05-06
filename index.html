@@ -1,4 +1,4 @@
-```html
+```html id="e9k2ab"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,250 +6,120 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jagdish Health Center</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#333;}
 
-body {
-    background: #f5f7fa;
-    color: #333;
-}
+header{background:#0d6efd;color:white;padding:15px 0;}
+nav{display:flex;justify-content:space-between;align-items:center;width:90%;margin:auto;}
+nav ul{list-style:none;display:flex;}
+nav ul li{margin-left:20px;}
+nav a{color:white;text-decoration:none;}
 
-/* Navbar */
-header {
-    background: #0d6efd;
-    color: white;
-    padding: 15px 0;
+.hero{
+background:url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5') no-repeat center/cover;
+height:80vh;display:flex;align-items:center;justify-content:center;color:white;text-align:center;
 }
+.hero h2{font-size:40px;}
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: auto;
-}
+.section{padding:50px 10%;}
+.section h2{text-align:center;margin-bottom:30px;color:#0d6efd;}
 
-nav h1 {
-    font-size: 24px;
-}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.card{background:white;padding:20px;border-radius:10px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+.card i{font-size:40px;color:#0d6efd;margin-bottom:10px;}
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
+.about{display:flex;flex-wrap:wrap;gap:20px;align-items:center;}
+.about img{max-width:400px;width:100%;border-radius:10px;}
 
-nav ul li {
-    margin-left: 20px;
-}
+.contact p{text-align:center;margin:10px;}
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-}
+footer{background:#0d6efd;color:white;text-align:center;padding:15px;}
 
-nav ul li a:hover {
-    text-decoration: underline;
+/* WhatsApp Button */
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:28px;
+padding:15px;
+border-radius:50%;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
 }
-
-/* Hero Section */
-.hero {
-    background: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5') no-repeat center/cover;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 18px;
-}
-
-.hero button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    background: #ffc107;
-    color: #000;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Sections */
-.section {
-    padding: 50px 10%;
-}
-
-.section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #0d6efd;
-}
-
-/* Services */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card i {
-    font-size: 40px;
-    color: #0d6efd;
-    margin-bottom: 10px;
-}
-
-/* About */
-.about {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-}
-
-.about img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-}
-
-.about-text {
-    flex: 1;
-}
-
-/* Contact */
-.contact p {
-    text-align: center;
-    margin: 10px 0;
-}
-
-/* Footer */
-footer {
-    background: #0d6efd;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-/* Responsive */
-@media(max-width: 768px){
-    .hero h2 {
-        font-size: 28px;
-    }
-}
+.whatsapp-btn:hover{background:#1ebe5d;}
 </style>
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <h1>Jagdish Health Center</h1>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav>
+<h1>Jagdish Health Center</h1>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 </header>
 
-<!-- Hero -->
 <section class="hero" id="home">
-    <div>
-        <h2>Quality Healthcare You Can Trust</h2>
-        <p>Caring for your health every day</p>
-        <button onclick="scrollToContact()">Book Appointment</button>
-    </div>
+<div>
+<h2>Quality Healthcare You Can Trust</h2>
+<p>Caring for your health every day</p>
+</div>
 </section>
 
-<!-- Services -->
 <section class="section" id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="card">
-            <i class="fas fa-user-md"></i>
-            <h3>General Checkup</h3>
-            <p>Routine health checkups and consultations.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-heartbeat"></i>
-            <h3>Heart Care</h3>
-            <p>Basic heart health monitoring and advice.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-pills"></i>
-            <h3>Medication</h3>
-            <p>Proper guidance and prescriptions.</p>
-        </div>
-
-        <div class="card">
-            <i class="fas fa-briefcase-medical"></i>
-            <h3>Emergency Care</h3>
-            <p>Immediate attention for minor emergencies.</p>
-        </div>
-    </div>
+<h2>Our Services</h2>
+<div class="services">
+<div class="card"><i class="fas fa-user-md"></i><h3>General Checkup</h3></div>
+<div class="card"><i class="fas fa-heartbeat"></i><h3>Heart Care</h3></div>
+<div class="card"><i class="fas fa-pills"></i><h3>Medication</h3></div>
+<div class="card"><i class="fas fa-briefcase-medical"></i><h3>Emergency Care</h3></div>
+</div>
 </section>
 
-<!-- About -->
 <section class="section about" id="about">
-    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118" alt="clinic">
-    <div class="about-text">
-        <h2>About Us</h2>
-        <p>
-            Jagdish Health Center is dedicated to providing affordable and reliable healthcare 
-            services. Our mission is to ensure every patient receives personal attention and 
-            quality treatment in a comfortable environment.
-        </p>
-    </div>
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118">
+<div>
+<h2>About Us</h2>
+<p>We provide affordable and reliable healthcare services with personal care.</p>
+</div>
 </section>
 
-<!-- Contact -->
 <section class="section contact" id="contact">
-    <h2>Contact Us</h2>
-    <p><i class="fas fa-map-marker-alt"></i> Sus Lane, Pashan, Pune</p>
-    <p><i class="fas fa-phone"></i> +91 98905 42429</p>
-    <p><i class="fas fa-clock"></i> 8:00 AM – 10:00 AM</p>
+<h2>Contact Us</h2>
+<p><i class="fas fa-map-marker-alt"></i> Sus Lane, Pashan, Pune</p>
+<p><i class="fas fa-phone"></i> +91 9370306565</p>
+<p><i class="fas fa-clock"></i> 8:00 AM – 10:00 AM</p>
+
+<br>
+<a href="https://wa.me/919370306565?text=Hello%20Jagdish%20Health%20Center%2C%20I%20want%20to%20book%20an%20appointment." target="_blank">
+<button style="padding:12px 20px;background:#25D366;color:white;border:none;border-radius:5px;cursor:pointer;">
+<i class="fab fa-whatsapp"></i> Chat on WhatsApp
+</button>
+</a>
+
 </section>
 
 <footer>
-    <p>&copy; 2026 Jagdish Health Center</p>
+<p>&copy; 2026 Jagdish Health Center</p>
 </footer>
 
-<script>
-function scrollToContact() {
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-}
-</script>
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919370306565?text=Hello%20Jagdish%20Health%20Center%2C%20I%20want%20to%20book%20an%20appointment." 
+class="whatsapp-btn" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
