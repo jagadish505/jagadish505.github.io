@@ -1,121 +1,256 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jagdish Health Center</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f7f9;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jagdish Health Center</title>
 
-        header {
-            background: #2c7be5;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        nav {
-            background: #1a5bb8;
-            padding: 10px;
-            text-align: center;
-        }
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+body {
+    background: #f5f7fa;
+    color: #333;
+}
 
-        .container {
-            padding: 20px;
-        }
+/* Navbar */
+header {
+    background: #0d6efd;
+    color: white;
+    padding: 15px 0;
+}
 
-        .section {
-            margin-bottom: 30px;
-        }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
 
-        h2 {
-            color: #2c7be5;
-        }
+nav h1 {
+    font-size: 24px;
+}
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+}
 
-        .card {
-            background: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+nav ul li {
+    margin-left: 20px;
+}
 
-        footer {
-            background: #2c7be5;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
-    </style>
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5') no-repeat center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: #ffc107;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Sections */
+.section {
+    padding: 50px 10%;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0d6efd;
+}
+
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card i {
+    font-size: 40px;
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+/* About */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* Contact */
+.contact p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Jagdish Health Center</h1>
-    <p>Your Trusted Local Healthcare Clinic</p>
+    <nav>
+        <h1>Jagdish Health Center</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-</nav>
+<!-- Hero -->
+<section class="hero" id="home">
+    <div>
+        <h2>Quality Healthcare You Can Trust</h2>
+        <p>Caring for your health every day</p>
+        <button onclick="scrollToContact()">Book Appointment</button>
+    </div>
+</section>
 
-<div class="container">
+<!-- Services -->
+<section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <i class="fas fa-user-md"></i>
+            <h3>General Checkup</h3>
+            <p>Routine health checkups and consultations.</p>
+        </div>
 
-    <section id="about" class="section">
+        <div class="card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Heart Care</h3>
+            <p>Basic heart health monitoring and advice.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-pills"></i>
+            <h3>Medication</h3>
+            <p>Proper guidance and prescriptions.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-briefcase-medical"></i>
+            <h3>Emergency Care</h3>
+            <p>Immediate attention for minor emergencies.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section class="section about" id="about">
+    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118" alt="clinic">
+    <div class="about-text">
         <h2>About Us</h2>
         <p>
-            Jagdish Health Center is a trusted healthcare clinic dedicated to providing 
-            quality medical care for individuals and families. We focus on patient well-being, 
-            offering reliable and affordable healthcare services in a friendly environment.
+            Jagdish Health Center is dedicated to providing affordable and reliable healthcare 
+            services. Our mission is to ensure every patient receives personal attention and 
+            quality treatment in a comfortable environment.
         </p>
-    </section>
+    </div>
+</section>
 
-    <section id="services" class="section">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="card">General Checkups</div>
-            <div class="card">Basic Treatments</div>
-            <div class="card">Health Consultations</div>
-            <div class="card">Preventive Care</div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p><strong>Address:</strong> Sus Lane, Pashan, Pune, Maharashtra</p>
-        <p><strong>Phone:</strong> +91 98905 42429</p>
-        <p><strong>Hours:</strong> 8:00 AM – 10:00 AM (Daily)</p>
-    </section>
-
-</div>
+<!-- Contact -->
+<section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <p><i class="fas fa-map-marker-alt"></i> Sus Lane, Pashan, Pune</p>
+    <p><i class="fas fa-phone"></i> +91 98905 42429</p>
+    <p><i class="fas fa-clock"></i> 8:00 AM – 10:00 AM</p>
+</section>
 
 <footer>
-    <p>&copy; 2026 Jagdish Health Center | All Rights Reserved</p>
+    <p>&copy; 2026 Jagdish Health Center</p>
 </footer>
+
+<script>
+function scrollToContact() {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+}
+</script>
 
 </body>
 </html>
+```
